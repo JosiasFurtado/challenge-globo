@@ -85,7 +85,7 @@ const s = StyleSheet.create({
     justifyContent: "center"
   },
   chat: {
-    bottom: 0
+    width: "100%"
   },
   clReverse: {
     flexDirection: "column-reverse"
@@ -93,12 +93,15 @@ const s = StyleSheet.create({
   colorDark: {
     color: "#000"
   },
+  colorPri: {
+    color: "#FF3100"
+  },
   colorSec: {
     color: "#fff"
   },
   compView: {
-    height: Dimensions.get("screen").height / 1.67,
-    marginTop: -10
+    marginTop: -10,
+    minHeight: "49%"
   },
   contentAround: {
     justifyContent: "space-around"
@@ -218,6 +221,11 @@ const s = StyleSheet.create({
   minH: {
     minHeight: Dimensions.get("screen").height / 1.89
   },
+  movie: {
+    height: 170,
+    marginHorizontal: 5,
+    width: 130
+  },
   msgView: {
     alignItems: "flex-end",
     backgroundColor: "#555",
@@ -231,6 +239,9 @@ const s = StyleSheet.create({
   },
   mv16: {
     marginVertical: 16
+  },
+  mv8: {
+    marginVertical: 8
   },
   negMT30: {
     marginTop: -30

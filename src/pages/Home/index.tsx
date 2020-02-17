@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SafeAreaView, View, Text, Image } from "react-native";
+import { SafeAreaView, View, Text, Image, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import {
   Ionicons,
@@ -55,8 +55,8 @@ const Home: React.FC = () => {
 
   function nothingSelected() {
     return (
-      <View style={[s.center, s.bgDark, s.compView]}>
-        <Text style={[s.f18, s.txtBold, s.colorSec, s.negMT30]}>
+      <View style={[s.center, s.bgDark, { height: "70%", marginTop: -10 }]}>
+        <Text style={[s.f18, s.txtBold, s.colorSec]}>
           Selecione uma forma de interação
         </Text>
       </View>

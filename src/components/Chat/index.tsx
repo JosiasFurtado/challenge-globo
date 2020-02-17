@@ -53,10 +53,10 @@ const Chat: React.FC = () => {
           </View>
         ))}
       </View>
-      <View style={s.chat}>
+      <KeyboardAvoidingView style={s.chat}>
         <View style={[s.center, s.flexRow]}>
           <TextInput
-            style={[s.input, s.borderRadius, s.mB16, s.pad8]}
+            style={[s.input, s.borderRadius, s.pad8]}
             placeholder="Digite sua mensagem"
             placeholderTextColor="#555"
             autoCorrect={false}
@@ -71,7 +71,7 @@ const Chat: React.FC = () => {
             <MaterialCommunityIcons name="send" size={25} color="#000" />
           </TouchableOpacity>
         </View>
-      </View>
+      </KeyboardAvoidingView>
     </KeyboardAvoidingView>
   );
 };

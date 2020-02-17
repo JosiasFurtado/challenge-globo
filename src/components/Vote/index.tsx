@@ -5,6 +5,7 @@ import {
   Text,
   Image,
   TouchableOpacity,
+  ScrollView,
   FlatList
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -22,7 +23,7 @@ const Vote: React.FC = () => {
     },
     {
       id: "02",
-      name: "Vingadores Ultimato",
+      name: "Vingadores",
       select: false,
       img:
         "https://is3-ssl.mzstatic.com/image/thumb/Video113/v4/cb/2b/96/cb2b96dd-7cd0-ba41-e742-e90045218c3e/DIS_AV_ENDGAME_BRP_FINAL_BR_ARTWORK_PT-BR_2000x3000_1OWPBJ00000FMO.lsr/268x0w.jpg"
@@ -33,6 +34,12 @@ const Vote: React.FC = () => {
       select: false,
       img:
         "http://www.centrodeartes.uff.br/wp-content/uploads/2019/10/coringa.jpg"
+    },
+    {
+      id: "04",
+      name: "Aves de Rapina",
+      select: false,
+      img: "https://www.claquete.com.br/fotos/filmes/poster/12684_medio.jpg"
     }
   ]);
 
@@ -43,7 +50,7 @@ const Vote: React.FC = () => {
     setMovies(moviesCheck);
   }
   return (
-    <SafeAreaView style={[s.bgDark, s.compView]}>
+    <ScrollView style={[s.bgDark, s.compView]}>
       <View style={[s.itemsCenter, s.flex1, s.mT35]}>
         {vote ? (
           <View style={[s.center, s.flex1, s.negMT30]}>
@@ -57,7 +64,7 @@ const Vote: React.FC = () => {
               Que filme gostaria de ver hoje na Tela Quente?
             </Text>
             <FlatList
-              style={{ maxHeight: 330 }}
+              style={{ maxHeight: 270 }}
               horizontal
               data={movies}
               keyExtractor={movie => movie.id}
@@ -84,7 +91,7 @@ const Vote: React.FC = () => {
                   )}
                   <Image
                     source={{ uri: movie.item.img }}
-                    style={[{ height: 220, width: 160 }, s.mT8, s.borderRadius]}
+                    style={[s.movie, s.borderRadius]}
                   />
                   <Text style={[s.colorSec, s.f16]}>{movie.item.name}</Text>
                 </View>
@@ -100,7 +107,7 @@ const Vote: React.FC = () => {
           </>
         )}
       </View>
-    </SafeAreaView>
+    </ScrollView>
   );
 };
 
