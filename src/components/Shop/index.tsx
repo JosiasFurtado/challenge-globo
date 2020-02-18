@@ -13,7 +13,7 @@ const Shop: React.FC = () => {
   const fakeShopJSON = [
     {
       id: "01",
-      title: "Vestido Vermelho",
+      title: "Vestido da Fátima",
       img: "https://i.shafacdn.net/images/67407-65-auto-auto-VPra6vMQRV8.jpg",
       price: "R$ 89,90"
     },
