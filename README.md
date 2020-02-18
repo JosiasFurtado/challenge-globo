@@ -26,6 +26,10 @@ Com emulador aberto rode o projeto com:
 yarn start OU npm start
 ```
 
+## Screenshots
+
+Para ver clique: [Screenshots](https://github.com/JosiasFurtado/challenge-globo/blob/master/screenshots/README.md)
+
 ## Foi utilizado
 
 - [React Native](https://facebook.github.io/react-native/docs/getting-started)
