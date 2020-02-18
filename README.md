@@ -1,3 +1,5 @@
+Desafio proposto pela Rede GLOBO buscando inovação na interação no Mega Hackathon da Shawee
+
 # Interativa
 
 Aplicação em React Native utilizando Expo visando a interatividade entre a TV e o telespectador.
@@ -35,3 +37,10 @@ yarn start OU npm start
 ## Autor
 
 - [Josias Furtado](https://github.com/josiasfurtado)
+
+## Colaboradores
+
+- [Rodrigo Temóteo](https://github.com/rodrigoatemoteo)
+- [Guilherme Lopes](https://github.com/guilhermecostalopes)
+- [Paulo Victor](https://github.com/paulovictorBraw)
+- [Fernando Santana](https://github.com/NandoSantana)
