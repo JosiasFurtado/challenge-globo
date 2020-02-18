@@ -33,7 +33,7 @@ yarn start OU npm start
 ## Screenshots e Video
 
 - [Screenshots](https://github.com/JosiasFurtado/challenge-globo/blob/master/screenshots/README.md)
-- [Video com navegação](https://drive.google.com/open?id=1xO-Tga4kYu3eW5QLc_53moeS731EoBkI)
+- [Video com navegação](https://drive.google.com/open?id=1G1cxbmkjFuYrolYRuEvlkEs-gqw9KUMC)
 
 ## Foi utilizado
 
