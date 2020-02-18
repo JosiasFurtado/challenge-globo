@@ -1,4 +1,4 @@
-Desafio proposto pela Rede GLOBO buscando inovação na interação no Mega Hackathon da Shawee
+Desafio proposto pela Rede Globo buscando inovação na interação com a TV no Mega Hackathon da Shawee
 
 # Interativa
 
