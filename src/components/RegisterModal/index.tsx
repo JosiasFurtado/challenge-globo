@@ -1,5 +1,13 @@
 import React from "react";
-import { View, Modal, Text, TextInput, TouchableOpacity } from "react-native";
+import {
+  View,
+  Modal,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Platform
+} from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import s from "../../globalStyles";
 
 interface Props {
@@ -28,10 +36,18 @@ const RegisterModal: React.FC<Props> = props => {
               s.pad8
             ]}
           >
+            {Platform.OS === "ios" ? (
+              <TouchableOpacity
+                style={[s.itemsEnd, { width: "90%" }]}
+                onPress={() => setModalVisible(false)}
+              >
+                <Ionicons name="ios-close" size={35} color="#fff" />
+              </TouchableOpacity>
+            ) : null}
             <Text
               textBreakStrategy="highQuality"
               allowFontScaling={false}
-              style={[s.txtBold, s.colorSec, s.f18, s.mT16, s.mh16]}
+              style={[s.txtBold, s.colorSec, s.f18, s.mT8, s.mh16]}
             >
               Registre-se para interagir com seus programas preferidos
             </Text>
