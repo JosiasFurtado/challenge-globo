@@ -11,7 +11,12 @@ import { useNavigation } from "@react-navigation/native";
 import s from "../../globalStyles";
 import logo from "../../assets/logo.png";
 
-const Header: React.FC = () => {
+interface Props {
+  title: string;
+}
+
+const Header: React.FC<Props> = props => {
+  const { title } = props;
   const navigation = useNavigation();
   return (
     <SafeAreaView style={[s.header, s.contentBet]}>
@@ -20,9 +25,7 @@ const Header: React.FC = () => {
           <Image source={logo} style={s.logoHeader} />
         </View>
         <View style={[s.borderL, s.mh16]}>
-          <Text style={[s.colorSec, s.f14, s.txtBold, s.mh16]}>
-            Encontro c/ Fátima
-          </Text>
+          <Text style={[s.colorSec, s.f14, s.txtBold, s.mh16]}>{title}</Text>
         </View>
       </View>
       <TouchableOpacity

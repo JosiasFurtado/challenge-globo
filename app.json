@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Blank Template (TypeScript)",
-    "slug": "globo",
+    "name": "Interativa",
+    "slug": "interativa",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": ["ios", "android", "web"],
@@ -18,7 +18,12 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.umbe.interativa"
+    },
+    "android": {
+      "package": "com.umbe.interativa",
+      "versionCode": 1
     }
   }
 }

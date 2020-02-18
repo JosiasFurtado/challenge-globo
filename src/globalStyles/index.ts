@@ -85,6 +85,7 @@ const s = StyleSheet.create({
     justifyContent: "center"
   },
   chat: {
+    marginBottom: 15,
     width: "100%"
   },
   clReverse: {
@@ -141,6 +142,15 @@ const s = StyleSheet.create({
   },
   f32: {
     fontSize: 32
+  },
+  fakeInput: {
+    alignItems: "center",
+    alignSelf: "center",
+    backgroundColor: "#EDF2F7",
+    borderRadius: 5,
+    height: 45,
+    justifyContent: "space-between",
+    width: "90%"
   },
   flex1: {
     flex: 1

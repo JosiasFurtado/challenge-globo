@@ -1,33 +1,30 @@
 import React, { useState } from "react";
 import {
-  ScrollView,
+  SafeAreaView,
   View,
   Text,
-  TextInput,
-  KeyboardAvoidingView,
-  TouchableOpacity,
-  Platform
+  Modal,
+  TouchableHighlight
 } from "react-native";
 import { Avatar } from "react-native-paper";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import s from "../../globalStyles";
+import InputModal from "../InputModal";
 
 const Chat: React.FC = () => {
   const [msg, setMsg] = useState([]);
+  const [modalVisible, setModalVisible] = useState(false);
   const [value, setValue] = useState("");
 
   function handleSubmit() {
     if (value === "") return;
     setMsg([...msg, { id: "userID", textMsg: value }]);
     setValue("");
+    setModalVisible(false);
   }
+
   return (
-    <KeyboardAvoidingView
-      style={[s.bgDark, s.compView]}
-      behavior={Platform.OS === "ios" ? "padding" : null}
-      keyboardVerticalOffset={Platform.select({ ios: 60, android: 78 })}
-      enabled
-    >
+    <SafeAreaView style={[s.bgDark, s.compView]}>
       <View style={[s.minH, s.contentEnd]}>
         {msg.map(item => (
           <View
@@ -53,26 +50,31 @@ const Chat: React.FC = () => {
           </View>
         ))}
       </View>
-      <KeyboardAvoidingView style={s.chat}>
-        <View style={[s.center, s.flexRow]}>
-          <TextInput
-            style={[s.input, s.borderRadius, s.pad8]}
-            placeholder="Digite sua mensagem"
-            placeholderTextColor="#555"
-            autoCorrect={false}
-            allowFontScaling={false}
-            value={value}
-            onChangeText={text => setValue(text)}
-            onSubmitEditing={handleSubmit}
-            autoCapitalize="none"
-            returnKeyType="send"
-          />
-          <TouchableOpacity style={s.iconChat} onPress={() => handleSubmit()}>
+      {!modalVisible ? (
+        <TouchableHighlight
+          onPress={() => setModalVisible(true)}
+          style={[s.fakeInput, s.pad8, s.flexRow]}
+        >
+          <>
+            <Text style={{ color: "#555" }}>Digite sua mensagem</Text>
             <MaterialCommunityIcons name="send" size={25} color="#000" />
-          </TouchableOpacity>
-        </View>
-      </KeyboardAvoidingView>
-    </KeyboardAvoidingView>
+          </>
+        </TouchableHighlight>
+      ) : (
+        <Modal
+          animationType="fade"
+          transparent
+          visible={modalVisible}
+          onRequestClose={() => setModalVisible(false)}
+        >
+          <InputModal
+            handleSubmit={handleSubmit}
+            value={value}
+            setValue={setValue}
+          />
+        </Modal>
+      )}
+    </SafeAreaView>
   );
 };
 

@@ -19,6 +19,7 @@ function DrawerContent() {
   function handleChange() {
     setTheme(!theme);
   }
+
   return (
     <View style={s.flex1}>
       <View style={[s.mh16, s.mT35]}>

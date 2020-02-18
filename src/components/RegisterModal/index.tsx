@@ -46,6 +46,15 @@ const RegisterModal: React.FC<Props> = props => {
             />
             <TextInput
               style={[s.input, s.borderRadius, s.mT16, s.pad8]}
+              placeholder="Sobrenome"
+              placeholderTextColor="#555"
+              autoCorrect={false}
+              allowFontScaling={false}
+              autoCapitalize="none"
+              returnKeyType="next"
+            />
+            <TextInput
+              style={[s.input, s.borderRadius, s.mT16, s.pad8]}
               placeholder="Email"
               placeholderTextColor="#555"
               autoCorrect={false}

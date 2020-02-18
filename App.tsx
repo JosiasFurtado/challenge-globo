@@ -5,6 +5,7 @@ import Routes from "./src/routes";
 import store from "./src/store";
 
 const App: React.FC = () => {
+  console.disableYellowBox = true;
   return (
     <Provider store={store}>
       <StatusBar
